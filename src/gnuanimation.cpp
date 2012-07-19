@@ -5,6 +5,7 @@
  * ***************************************************/
 #include <iostream>
 #include <cmath>
+#include <unistd.h>
 
 #define tab "\t"
 
@@ -17,7 +18,8 @@ int main(int argc,char **argv)
         cout<<"p [-1.5:1.5][-1.5:1.5] '-' ps 2"<<endl;
         cout<<sin(t)<<tab<<cos(t)<<endl<<'e'<<endl<<flush;
         // the next line slows down the animation
-        for(int i=0;i<5000000;i++);
+        // for(int i=0;i<5000000;i++);
+	usleep(1000);
     }
     return 0;
 }
